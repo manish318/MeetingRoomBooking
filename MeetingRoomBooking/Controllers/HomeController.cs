@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Services.Hall;
 using System.Diagnostics;
+using Microsoft.Extensions.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace MeetingRoomBooking.Controllers
 {
@@ -16,6 +19,8 @@ namespace MeetingRoomBooking.Controllers
 
         public IActionResult Index()
         {
+          
+            
              var name= _hallService.GetName();
 
             ViewBag.name = name;

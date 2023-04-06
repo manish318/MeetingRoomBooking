@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Hall
+namespace MeetingRoomDatabase
 {
-    public interface IHallService
+    public class AppDbContext
     {
-        string GetName();
+
     }
 }

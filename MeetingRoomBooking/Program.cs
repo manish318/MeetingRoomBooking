@@ -3,8 +3,9 @@ using Services.Hall;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddTransient<IHallService, HallService>();
+
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IHallService, HallService>();
 
 var app = builder.Build();
 
