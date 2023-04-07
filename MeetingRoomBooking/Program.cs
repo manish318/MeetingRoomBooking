@@ -1,10 +1,13 @@
 using Services.Hall;
+using Microsoft.EntityFrameworkCore;
+using MeetingRoomBooking.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<HallBookingContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 builder.Services.AddTransient<IHallService, HallService>();
 
 var app = builder.Build();
